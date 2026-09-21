@@ -1,0 +1,19 @@
+function init(self)
+	msg.post(".", "acquire_input_focus")
+	particlefx.play("/go#fireworks");
+end
+
+local flg = false;
+function on_input(self, action_id, action)
+	if action_id == hash("touch") and action.pressed then
+		if (flg) then
+			msg.post("proxy:/loader#loader", "speed_change", {proxy = "main", speed = 1});
+			flg = false;
+			label.set_text("/go#label", "game speed: 1");
+		else
+			msg.post("proxy:/loader#loader", "speed_change", {proxy = "main", speed = 4});
+			flg = true;
+			label.set_text("/go#label", "game speed: 4");
+		end
+	end
+end

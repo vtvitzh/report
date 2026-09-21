@@ -1,0 +1,13 @@
+function init(self)
+	msg.post(".", "acquire_input_focus");
+	msg.post("#main", "async_load"); -- 定数読込を含むので一番初めにロードする
+end
+
+function on_message(self, message_id, message, sender)
+	if message_id == hash("proxy_loaded") then
+		msg.post(sender, "init");
+		msg.post(sender, "enable");
+	elseif message_id == hash("speed_change") then
+		msg.post("#"..message.proxy, "set_time_step", {factor = message.speed, mode = 0});
+	end
+end
