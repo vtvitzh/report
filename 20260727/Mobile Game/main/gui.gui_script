@@ -6,10 +6,15 @@ function on_input(self, action_id, action)
 	local p = vmath.vector3(action.screen_x, action.screen_y + 200, 0)
 	local pieNode = gui.get_node("pie");
 	gui.set_position(pieNode, gui.screen_to_local(pieNode, p))
-	local p2 = gui.get_position(pieNode)
-	if (gui.pick_node(gui.get_node("box"), p2.x, p2.y)) then
-		gui.set_color(pieNode, vmath.vector3(0, 1, 1));
+
+	-- Fix GUI fit adjust
+	local w, h = window.get_size()
+	local x = p.x * sys.get_config_int("display.width") / w
+	local y = p.y * sys.get_config_int("display.height") / h
+
+	if gui.pick_node(gui.get_node("box"), x, y) then
+		gui.set_color(pieNode, vmath.vector3(0, 1, 1))
 	else
-		gui.set_color(pieNode, vmath.vector3(1, 0, 0));
+		gui.set_color(pieNode, vmath.vector3(1, 0, 0))
 	end
 end
