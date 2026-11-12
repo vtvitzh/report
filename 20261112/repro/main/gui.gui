@@ -1,0 +1,58 @@
+fonts {
+  name: "font_default"
+  font: "/assets/fonts/font_default.font"
+}
+fonts {
+  name: "initial"
+  font: "/assets/fonts/initial.font"
+}
+nodes {
+  position {
+    x: 317.0
+    y: 876.0
+  }
+  scale {
+    x: 5.0
+    y: 5.0
+  }
+  size {
+    x: 200.0
+    y: 100.0
+  }
+  type: TYPE_TEXT
+  text: "test\343\201\273\343\201\222"
+  font: "font_default"
+  id: "normalFontText"
+  outline {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+  shadow {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+  inherit_alpha: true
+}
+nodes {
+  position {
+    x: 323.0
+    y: 509.0
+  }
+  scale {
+    x: 5.0
+    y: 5.0
+  }
+  size {
+    x: 200.0
+    y: 100.0
+  }
+  type: TYPE_TEXT
+  text: "test\343\201\273\343\201\222"
+  font: "initial"
+  id: "bitmapFontText"
+  inherit_alpha: true
+}
+material: "/builtins/materials/gui.material"
+adjust_reference: ADJUST_REFERENCE_PARENT

@@ -1,0 +1,4 @@
+font: "/assets/fonts/initial/initial.fnt"
+material: "/builtins/fonts/font-fnt.material"
+size: 15
+characters: " !\"#$%&\'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~"

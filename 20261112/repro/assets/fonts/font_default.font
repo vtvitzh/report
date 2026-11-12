@@ -1,0 +1,7 @@
+font: "/assets/fonts/MPLUS2-Bold.ttf"
+material: "/builtins/fonts/font.material"
+size: 30
+all_chars: true
+cache_width: 4096
+cache_height: 8192
+characters: " !\"#$%&\'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~"
